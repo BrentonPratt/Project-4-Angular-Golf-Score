@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-form-field>
+    <mat-select placeholder="Select a Course!" (selectionChange)="getCourses($event.value)">
+      <mat-option [value]="'undefined'">Course List</mat-option>
+      <mat-option *ngFor="let course of courses$ | async" [value]="course.$key">
+        {{ course.name }}
+      </mat-option>
+    </mat-select>
+    <mat-select placeholder="Number of Players" (selectionChange)="buildTable()">
+      <mat-option [value]="'undefined'">Number of Players</mat-option>
+      <mat-option>1</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>
