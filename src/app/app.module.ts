@@ -16,6 +16,11 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,11 @@ import {HttpClientModule} from '@angular/common/http';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,18 @@
 <mat-card>
   <mat-form-field>
-    <mat-select placeholder="Select a Course!" (selectionChange)="getCourses($event.value)">
+    <mat-select [(ngModel)]="selectedCourse" placeholder="Select a Course!" (selectionChange)="courseData($event.value)">
       <mat-option [value]="'undefined'">Course List</mat-option>
-      <mat-option *ngFor="let course of courses$ | async" [value]="course.$key">
+      <mat-option *ngFor="let course of courses$" [value]="course.id">
         {{ course.name }}
       </mat-option>
     </mat-select>
-    <mat-select placeholder="Number of Players" (selectionChange)="buildTable()">
-      <mat-option [value]="'undefined'">Number of Players</mat-option>
-      <mat-option>1</mat-option>
-    </mat-select>
+  </mat-form-field>
+  <mat-form-field *ngIf="selectedCourse">
+      <mat-select placeholder="Select a Tee!" (selectionChange)="teeData($event.value)">
+        <mat-option [value]="'undefined'">Tee List</mat-option>
+        <mat-option *ngFor="let tee of teeBoxes" [value]="tee.teeTypeId">
+          {{ tee.teeType }}
+        </mat-option>
+      </mat-select>
   </mat-form-field>
 </mat-card>

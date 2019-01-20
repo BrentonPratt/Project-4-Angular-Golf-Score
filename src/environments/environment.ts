@@ -9,7 +9,7 @@ export const environment = {
     authDomain: "golf-scorecard-d25e1.firebaseapp.com",
     databaseURL: "https://golf-scorecard-d25e1.firebaseio.com",
     projectId: "golf-scorecard-d25e1",
-    storageBucket: "",
+    storageBucket: "golf-scorecard-d25e1.appspot.com",
     messagingSenderId: "402946787598"
   }
 };
