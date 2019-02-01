@@ -36,20 +36,3 @@ export class WelcomePageComponent implements OnInit {
   }
 
 }
-
-
-/*
-export class AppCharacterListComponent implements OnInit, OnChanges, OnDestroy {
-  hideDetails = true;
-  characters: Observable<Character[]>;
-  characterFilter: string = '';
-
-  constructor(private characterService: CharacterService, private router: Router) {
-    console.log('constructor called');
-  }
-
-  ngOnInit() {
-    this.characters = this.characterService
-      .getCharacters();
-  }
-  */
