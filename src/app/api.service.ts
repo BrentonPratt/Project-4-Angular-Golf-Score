@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Player} from './player';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +8,15 @@ import {HttpClient} from '@angular/common/http';
 export class ApiService {
   private courseURL = 'https://golf-courses-api.herokuapp.com/courses';
   private courseID = null;
-  private teeID = null;
+  teeID = null;
+  players: Player[];
+  numPlayers: number;
 
   constructor(
     private http: HttpClient,
-    ) {}
+    ) {
+    this.players = [];
+  }
 
   getAPI(){
     return this.http.get(this.courseURL)
@@ -25,7 +30,7 @@ export class ApiService {
     this.courseID = courseID;
   }
 
-  setTeeID(teeID){
+  /*setTeeID(teeID){
     this.teeID = teeID;
-  }
+  }*/
 }
