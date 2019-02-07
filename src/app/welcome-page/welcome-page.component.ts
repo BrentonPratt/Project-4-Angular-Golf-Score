@@ -46,7 +46,3 @@ export class WelcomePageComponent implements OnInit {
     }
   }
 }
-
-/*for (this.numPlayers; this.playService.players.length < this.numPlayers;) {
-      this.playService.players.push({name: "", score:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]})
-    }*/

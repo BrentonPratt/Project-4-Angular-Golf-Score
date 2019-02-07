@@ -29,8 +29,6 @@ export class ScorePageComponent implements OnInit {
     this.courseService.getCourseData()
       .subscribe(data => {
         data.data.holes.splice(10,0, {hole: 'Out', teeBoxes: [{par: null, hcp: null, yards: null}]});
-        /*data.data.holes.splice(20,0, {hole: 'In', teeBoxes: [{par: null, hcp: null, yards: null}]},
-          {hole: 'Total', teeBoxes: [{par: this.totalPar, hcp: this.totalHcp, yards: this.totalYards}]});*/
         this.getCourseData = data.data.holes;
       });
     console.log(this.players);

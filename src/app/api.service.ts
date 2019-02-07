@@ -29,8 +29,4 @@ export class ApiService {
   setCourseID(courseID){
     this.courseID = courseID;
   }
-
-  /*setTeeID(teeID){
-    this.teeID = teeID;
-  }*/
 }
